@@ -212,7 +212,13 @@ while True:
                 continue
             else:
                 break
-        option = input('WOULD YOU LIKE TO \'DINE IN\' OR \'TAKE AWAY\'?')
+        while True:  ##statements added
+            option = input('WOULD YOU LIKE TO \'DINE IN\' OR \'TAKE AWAY\'?')
+            if ('dine in' in option.lower()) or ('take away' in option.lower()):
+                break
+            else:
+                print(('please enter a valid input'))
+                continue
         print('\n********** BILL ***********')
         print('\t', option)
         total = 0
